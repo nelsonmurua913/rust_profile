@@ -1,0 +1,11 @@
+type Profile = record {
+    "name": text;
+    "age": nat16;
+    "details": vec text;
+};
+
+service : {
+    "getProfile": (text) -> (Profile) query;
+    "isRegistered": (text) -> (bool) query;
+    "register": (Profile) -> (bool);
+}
